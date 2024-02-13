@@ -140,9 +140,9 @@
     </div>
   </div>
 <script>
-     let cs=document.getElementById('cs');
+     let csa=document.getElementById('cs');
     function sai(){
-    
+    let cs=document.createElement("div");
     let label1=document.createElement("label");
     label1.innerText="Language: ";
     cs.appendChild(label1);
@@ -163,19 +163,14 @@
             checkbox.style.margin="5px";
             
         }
+        csa.appendChild(cs);
      }
     function sai1(){
-
-      // cs.remove();              entire languages are deleting
-      // cs.removeChild(cs.firstChild);
-      for (let index = 0; index < 8; index++) {
-              // cs.removeChild(cs.children[index])
-              cs.removeChild(cs.firstElementChild)
-        
-      }
+      
+      cs.removeChild(cs.lastChild);
+  
     }
 </script>
 
 </body>
   </html>
-  
